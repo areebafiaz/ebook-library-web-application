@@ -1,0 +1,211 @@
+/* Root Variables for New Theme Colors */
+:root {
+    --primary-bg: #E8DBD5;
+    --header-bg: #A17A69;
+    --text-color: white;
+    --button-bg: #B5927F;
+    --button-hover-bg: #CEA99A;
+    --card-bg: #DABCB2;
+    --border-color: #B5927F;
+    --shadow-color: rgba(161, 122, 105, 0.3);
+  }
+  /* Mobile Devices (up to 600px) */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .item {
+    width: 90%;
+  }
+
+  form input,
+  form textarea,
+  form button {
+    width: 100%;
+  }
+}
+
+/* Tablets (601px - 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .grid {
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .item {
+    width: 45%;
+  }
+
+  nav a {
+    font-size: 16px;
+  }
+}
+
+/* Small Laptops (1025px - 1280px) */
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .grid {
+    gap: 20px;
+  }
+
+  .item {
+    width: 30%;
+  }
+}
+
+/* Large Screens (Above 1280px) */
+@media (min-width: 1281px) {
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .item {
+    width: 250px;
+  }
+}
+
+  
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--primary-bg);
+    color: black;
+  }
+  
+  /* Header Styles */
+  header {
+    background-color: var(--header-bg);
+    color: var(--text-color);
+    text-align: center;
+    padding: 1em;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  /* Container & Grid Layout */
+  .container {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  /* Ebook Item Cards */
+  .item {
+    background: var(--card-bg);
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px var(--shadow-color);
+    width: 250px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .item:hover {
+    transform: translateY(-5px);
+  }
+  
+  .item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  /* Buttons */
+  button {
+    background: var(--button-bg);
+    color: var(--text-color);
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  button:hover {
+    background: var(--button-hover-bg);
+  }
+  
+  /* Contact Form */
+  .contact-container {
+    padding: 20px;
+  }
+  
+  form input,
+  form textarea,
+  form button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+  }
+  
+  form textarea {
+    height: 100px;
+  }
+  
+  form button {
+    background: var(--button-bg);
+    color: var(--text-color);
+    border: none;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background: var(--button-hover-bg);
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 10px;
+    background-color: var(--header-bg);
+    color: var(--text-color);
+  }
+  
+  /* Cart Popup Notification */
+  .cart-popup {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--button-bg);
+    color: var(--text-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px var(--shadow-color);
+    font-size: 16px;
+    animation: fadeOut 3s forwards;
+  }
+  
+  @keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+  
